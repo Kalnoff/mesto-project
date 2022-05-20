@@ -1,0 +1,15 @@
+.pop-up__close {
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/close/Close_Icon.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    align-items: flex-end;
+    height: 32px;
+    width: 480px;
+}
+
+.pop-up__close:hover {
+    opacity: .4;
+    cursor: pointer;
+}

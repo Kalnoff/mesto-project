@@ -1,0 +1,6 @@
+.edit__active {
+    width: 430px;
+    height: 330px;
+    position: absolute;
+    background-color: #fff;
+}

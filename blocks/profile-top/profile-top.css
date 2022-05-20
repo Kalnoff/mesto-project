@@ -1,0 +1,19 @@
+.profile-top {
+    display: flex;
+    min-height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 50px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .profile-top {
+    flex-direction: column;
+    min-height: 286px;
+    }
+}
+
+
+
+
