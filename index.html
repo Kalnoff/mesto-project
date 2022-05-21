@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Проект Mesto</title>
-  <link rel="stylesheet" href="./fonts/Inter/fonts.css">
-  <link rel="stylesheet" href="./pages/index.css">
-  <link rel="stylesheet" href="./styles/normalize.css">
-</head>
-<body class="page">
-  <!-- дописать класс pop-up__active для активации формы редактирования pop-up -->
-<section class="pop-up">
-  <div class="pop-up__container central">
-    <div class="pop-up__close central">
-      <button type="button" class="pop-up__close_icon"></button>
-    </div>
-    <div class="pop-up__content">
-      <form class="pop-up__form">
-        <p class="pop-up__title">Редактировать профиль</p>
-    <div class="pop-up__form_input">
-      <input type="text" class="pop-up__text" placeholder="Имя" value="Жак Ив Кусто">
-      <input type="text" class="pop-up__text" placeholder="Деятельность" value="Исследователь океана">
-    </div>
-      <input type="submit" class="pop-up__save" name="saving" value="Сохранить">
-    </form>
-    </div>
-    </div>
-</section>
-<div class="page-content">
-<header class="header central">
-  <img class="logo" src="./images/logo/logo.svg" alt="Логотип проекта Место">
-  <img class="headline">
-</header>
-<main class="content central">
-<section class="profile-top">
-  <img class="avatar" src="./images/ava/AvaKust.jpg">
-  <div class="info">
-<div class="info__container">
-  <div class="info__naming">
-  <h1 class="title">Жак Ив Кусто</h1>
-  <button type="button" class="edit"></button>
-  </div>
-  <p class="subline">Исследователь океана</p>
-</div>
-</div>
-<button type="button" class="plus-btn"></button>
-</section> 
-<section class="grid-container central">
-<div class="photo-grid">
-<div class="grid-item">
-<img class="grid-image" src="/images/places/Karachaevsk.jpg">
-<div class="cover">
-<h2 class="cover__text">Карачаевск</h2>
-<button aria-label class="like like__active"></button>
-</div>
-</div>
-<div class="grid-item">
-    <img class="grid-image" src="/images/places/Gory.jpg">
-    <div class="cover">
-    <h2 class="cover__text">Гора Эльбрус</h2>
-    <button aria-label class="like"></button>
-  </div>
-</div>
-<div class="grid-item">
-    <img class="grid-image" src="/images/places/Cherkes.jpg">
-    <div class="cover">
-    <h2 class="cover__text">Карачаево-Черкессия</h2>
-    <button aria-label class="like"></button>
-  </div>
-</div>
-<div class="grid-item">
-  <img class="grid-image" src="/images/places/Dombay.jpg">
-  <div class="cover">
-  <h2 class="cover__text">Домбай</h2>
-  <button aria-label class="like"></button>
-</div>
-</div>
-<div class="grid-item">
-  <img class="grid-image" src="/images/places/Elbrus.jpg">
-  <div class="cover">
-  <h2 class="cover__text">Эльбрус</h2>
-  <button aria-label class="like"></button>
-</div>
-</div>
-<div class="grid-item">
-  <img class="grid-image" src="/images/places/Gory-Gory.jpg">
-  <div class="cover">
-  <h2 class="cover__text">Гора Эльбрус</h2>
-  <button aria-label class="like"></button>
-</div>
-</div>
-</div>
-</section>
-
-</main>
-</div>
-<footer class="footer central">
-  <p class="copyright">&copy; 2022 Mesto Russia</p>
-</footer>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Проект Mesto</title>
+      <link rel="stylesheet" href="./fonts/Inter/fonts.css">
+      <link rel="stylesheet" href="./pages/index.css">
+      <link rel="stylesheet" href="./styles/normalize.css">
+   </head>
+   <body class="page">
+      <!-- дописать класс pop-up__active для активации формы редактирования pop-up -->
+      <section class="pop-up">
+         <div class="pop-up__container central">
+            <div class="pop-up__close central">
+               <button type="button" class="pop-up__close_icon"></button>
+            </div>
+            <div class="pop-up__content">
+               <form class="pop-up__form">
+                  <p class="pop-up__title">Редактировать профиль</p>
+                  <div class="pop-up__form_input">
+                     <input type="text" class="pop-up__text" placeholder="Имя" value="Жак Ив Кусто">
+                     <input type="text" class="pop-up__text" placeholder="Деятельность" value="Исследователь океана">
+                  </div>
+                  <input type="submit" class="pop-up__save" name="saving" value="Сохранить">
+               </form>
+            </div>
+         </div>
+      </section>
+      <div class="page-content">
+         <header class="header central">
+            <img class="logo" src="./images/logo/logo.svg" alt="Логотип проекта Место">
+            <img class="headline">
+         </header>
+         <main class="content central">
+            <section class="profile-top">
+               <img class="avatar" src="./images/ava/AvaKust.jpg">
+               <div class="info">
+                  <div class="info__container">
+                     <div class="info__naming">
+                        <h1 class="title">Жак Ив Кусто</h1>
+                        <button type="button" class="edit"></button>
+                     </div>
+                     <p class="subline">Исследователь океана</p>
+                  </div>
+               </div>
+               <button type="button" class="plus-btn"></button>
+            </section>
+            <section class="grid-container central">
+               <div class="photo-grid">
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Karachaevsk.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Карачаевск</h2>
+                        <button aria-label class="like like__active"></button>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Gory.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Гора Эльбрус</h2>
+                        <button aria-label class="like"></button>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Cherkes.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Карачаево-Черкессия</h2>
+                        <button aria-label class="like"></button>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Dombay.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Домбай</h2>
+                        <button aria-label class="like"></button>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Elbrus.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Эльбрус</h2>
+                        <button aria-label class="like"></button>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <img class="grid-image" src="./images/places/Gory-Gory.jpg">
+                     <div class="cover">
+                        <h2 class="cover__text">Гора Эльбрус</h2>
+                        <button aria-label class="like"></button>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+      </div>
+      <footer class="footer central">
+         <p class="copyright">&copy; 2022 Mesto Russia</p>
+      </footer>
+   </body>
 </html>
