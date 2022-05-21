@@ -10,11 +10,17 @@
     border: 1px solid white;
 }
 
+.edit:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 420px) {
     .edit {
         background-size: 7px;
         width: 18px;
         height: 18px;
+        margin: 0 0 0 10px;
     }
 }
 

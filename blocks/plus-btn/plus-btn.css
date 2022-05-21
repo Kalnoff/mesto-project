@@ -13,9 +13,14 @@
 /* padding: 0; */
 /* border-radius: 2px; */
     background-image: url(../../images/vector/Vector.svg);
-/* background-size: 22px 22px; */
+    background-size: 22px 22px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.plus-btn:hover {
+    opacity: .6;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1050px) {
@@ -28,6 +33,7 @@
 @media screen and (max-width: 320px) {
     .plus-btn {
         width: 282px;
+        background-size: 16px 16px;
     }
 }
 

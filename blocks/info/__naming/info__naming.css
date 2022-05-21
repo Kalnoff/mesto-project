@@ -3,3 +3,12 @@
     width: 100%;
     justify-content: center;
 }
+
+@media screen and (max-width: 420px) {
+    .info__naming {
+        width: 111%;
+        align-items: center;
+    }
+}
+
+

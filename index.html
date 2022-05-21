@@ -4,19 +4,16 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Проект Mesto</title>
-      <link rel="stylesheet" href="./fonts/Inter/fonts.css">
       <link rel="stylesheet" href="./pages/index.css">
       <link rel="stylesheet" href="./styles/normalize.css">
    </head>
    <body class="page">
-      <!-- дописать класс pop-up__active для активации формы редактирования pop-up -->
-      <section class="pop-up">
-         <div class="pop-up__container central">
-            <div class="pop-up__close central">
-               <button type="button" class="pop-up__close_icon"></button>
-            </div>
+      <div class="page-content central">
+         <!-- дописать класс pop-up_active для активации формы редактирования pop-up -->
+         <section class="pop-up">
             <div class="pop-up__content">
-               <form class="pop-up__form">
+               <button type="button" class="pop-up__close"></button>
+               <form class="pop-up__form central">
                   <p class="pop-up__title">Редактировать профиль</p>
                   <div class="pop-up__form_input">
                      <input type="text" class="pop-up__text" placeholder="Имя" value="Жак Ив Кусто">
@@ -25,9 +22,7 @@
                   <input type="submit" class="pop-up__save" name="saving" value="Сохранить">
                </form>
             </div>
-         </div>
-      </section>
-      <div class="page-content">
+         </section>
          <header class="header central">
             <img class="logo" src="./images/logo/logo.svg" alt="Логотип проекта Место">
             <img class="headline">
@@ -93,9 +88,9 @@
                </div>
             </section>
          </main>
+         <footer class="footer central">
+            <p class="copyright">&copy; 2022 Mesto Russia</p>
+         </footer>
       </div>
-      <footer class="footer central">
-         <p class="copyright">&copy; 2022 Mesto Russia</p>
-      </footer>
    </body>
 </html>

@@ -8,10 +8,11 @@
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 30px;
-    padding: 0 0 7px 0;
+    padding: 0;
     outline: none;
 }
 
 .pop-up__text:last-child {
     margin-bottom: 0;
 }
+
