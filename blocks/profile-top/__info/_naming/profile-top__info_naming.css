@@ -1,0 +1,13 @@
+.profile-top__info_naming {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 420px) {
+    .profile-top__info_naming {
+        align-items: center;
+    }
+}
+
+

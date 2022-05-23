@@ -1,0 +1,25 @@
+.page__main {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 2*200px);
+}
+
+@media screen and (max-width: 1050px) {
+    .page__main {
+        max-width: calc(100% - 2*100px);
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .page__main {
+        max-width: calc(100% - 2*19px);
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .page__main {
+        max-width: calc(100% - 2*19px);
+        margin: 0 0 0 11px;
+    }
+}

@@ -1,0 +1,12 @@
+.pop-up__container {
+    display: block;
+    line-height: 0; 
+    margin: 44px 0 0 0;
+ }
+ 
+ @media screen and (max-width: 600px) {
+    .pop-up__container {
+       margin: 69px 0 0 0;
+    }
+ }
+ 
