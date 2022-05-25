@@ -1,9 +1,12 @@
 .profile-top {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     display: flex;
     min-height: 120px;
     align-items: center;
     justify-content: space-between;
-    margin: 40px 0 34px;
+    margin: 40px 0 50px;
 }
 
 

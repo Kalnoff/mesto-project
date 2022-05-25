@@ -4,7 +4,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Проект Mesto</title>
-      <link rel="stylesheet" href="./styles/normalize.css">
       <link rel="stylesheet" href="./pages/index.css">
    </head>
    <body class="page">
@@ -16,9 +15,9 @@
             <section class="profile-top">
                <img class="profile-top__avatar" src="./images/ava/AvaKust.jpg" alt="Аватар пользователя">
                <div class="profile-top__info">
-                  <div class="profile-top__info_container">
-                     <div class="profile-top__info_naming">
-                        <h1 class="profile-top__info_title">Жак Ив Кусто</h1>
+                  <div class="profile-top__container">
+                     <div class="profile-top__naming">
+                        <h1 class="profile-top__title">Жак Ив Кусто</h1>
                         <button type="button" class="profile-top__edit"></button>
                      </div>
                      <p class="profile-top__subline">Исследователь океана</p>
@@ -76,7 +75,7 @@
             <section class="pop-up">
                <div class="pop-up__content">
                   <button type="button" class="pop-up__close"></button>
-                  <form class="form central">
+                  <form class="pop-up__form central" name="naming-form">
                      <h2 class="pop-up__title">Редактировать профиль</h2>
                      <div class="pop-up__container">
                         <input type="text" class="pop-up__text" placeholder="Имя" value="Жак Ив Кусто" name="user-name">
