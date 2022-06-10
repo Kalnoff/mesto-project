@@ -18,73 +18,65 @@
                   <div class="profile-top__container">
                      <div class="profile-top__naming">
                         <h1 class="profile-top__title">Жак Ив Кусто</h1>
-                        <button type="button" class="profile-top__edit"></button>
+                        <button type="button" class="profile-top__edit" id="profile-top__edit"></button>
                      </div>
                      <p class="profile-top__subline">Исследователь океана</p>
                   </div>
                </div>
-               <button type="button" class="profile-top__add-btn"></button>
+               <button type="button" class="profile-top__add-btn" id="profile-top__add-btn"></button>
             </section>
             <section class="grid-gallery central">
                <div class="grid-gallery__container">
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Karachaevsk.jpg" alt="Фото Карачаевска">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Карачаевск</h2>
-                        <button type="button" aria-label class="grid-gallery__like grid-gallery__like_active"></button>
+                  <template class="card-template">
+                     <div class="grid-gallery__item">
+                        <button aria-label="delete" class="grid-gallery__delete" type="button"></button> 
+                        <img class="grid-gallery__image" src="" alt="" id="openPlace">
+                        <div class="grid-gallery__cover">
+                           <h2 class="grid-gallery__text"></h2>
+                           <button type="button" aria-label class="grid-gallery__like"></button>
+                        </div>
                      </div>
-                  </div>
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Gory.jpg" alt="Фото гор">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Гора Эльбрус</h2>
-                        <button type="button" aria-label class="grid-gallery__like"></button>
-                     </div>
-                  </div>
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Cherkes.jpg" alt="Фото Карачаево-Черкессии">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Карачаево-Черкессия</h2>
-                        <button type="button" aria-label class="grid-gallery__like"></button>
-                     </div>
-                  </div>
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Dombay.jpg" alt="Фото Домбая">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Домбай</h2>
-                        <button type="button" aria-label class="grid-gallery__like"></button>
-                     </div>
-                  </div>
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Elbrus.jpg" alt="Фото Эльбруса">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Эльбрус</h2>
-                        <button type="button" aria-label class="grid-gallery__like"></button>
-                     </div>
-                  </div>
-                  <div class="grid-gallery__item">
-                     <img class="grid-gallery__image" src="./images/places/Gory-Gory.jpg" alt="Фото высоких гор">
-                     <div class="grid-gallery__cover">
-                        <h2 class="grid-gallery__text">Гора Эльбрус</h2>
-                        <button type="button" aria-label class="grid-gallery__like"></button>
-                     </div>
-                  </div>
+                  </template>
                </div>
             </section>
             <!-- дописать класс pop-up_active для активации формы редактирования pop-up -->
-            <section class="pop-up">
+            <section class="pop-up" id="userPopup">
                <div class="pop-up__content">
-                  <button type="button" class="pop-up__close"></button>
+                  <button type="button" class="pop-up__close" id="closingPopup"></button>
                   <form class="pop-up__form central" name="naming-form">
                      <h2 class="pop-up__title">Редактировать профиль</h2>
                      <div class="pop-up__container">
-                        <input type="text" class="pop-up__text" placeholder="Имя" value="Жак Ив Кусто" name="user-name">
-                        <input type="text" class="pop-up__text" placeholder="Деятельность" value="Исследователь океана" name="user-profession">
+                        <input type="text" class="pop-up__text" placeholder="Имя" id="popup-name" value="" name="user-name">
+                        <input type="text" class="pop-up__text" placeholder="Деятельность"  id="popup-profession" value="" name="user-profession">
                      </div>
                      <input type="submit" class="pop-up__save" value="Сохранить">
                   </form>
                </div>
             </section>
+            <!-- Новое место -->
+            <section class="pop-up" id="mestoPopup">
+               <div class="pop-up__content">
+                  <button type="button" class="pop-up__close" id="closingMesto"></button>
+                  <form class="pop-up__form central" name="naming-form">
+                     <h2 class="pop-up__title">Новое место</h2>
+                     <div class="pop-up__container">
+                        <input type="text" class="pop-up__text" placeholder="Название" id="mestoName" value="" name="user-name">
+                        <input type="text" class="pop-up__text" placeholder="Ссылка на картинку"  id="mestoId" value="" name="user-profession">
+                     </div>
+                     <input type="submit" class="pop-up__save" value="Сохранить">
+                  </form>
+               </div>
+            </section>
+            <!-- открытие добавленной карточки добавить класс pop-up__mesto -->
+            <section class="pop-up" id="cardPopup">
+               <div class="popup__mesto_content">
+                  <button type="button" class="pop-up__close" id="closingCard"></button>
+                  <img class="popup__mesto_image" src="" alt="">
+                  <h2 class="pop-up__card_title" id="MestoOpenSubline">Подпись карточки</h2>
+               </div>
+            </section>
+            <script src="./scripts/cards.js"></script>
+            <script src="./scripts/index.js"></script>
          </main>
          <footer class="footer central">
             <p class="footer__copyright">&copy; 2022 Mesto Russia</p>

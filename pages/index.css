@@ -24,6 +24,7 @@
 @import url(../blocks/grid-gallery/__like/_active/grid-gallery__like_active.css);
 @import url(../blocks/grid-gallery/__cover/grid-gallery__cover.css);
 @import url(../blocks/grid-gallery/__text/grid-gallery__text.css);
+@import url(../blocks/grid-gallery/__delete/grid-gallery__delete.css);
 @import url(../blocks/pop-up/pop-up.css);
 @import url(../blocks/pop-up/_active/pop-up_active.css);
 @import url(../blocks/pop-up/__content/pop-up__content.css);
@@ -33,5 +34,10 @@
 @import url(../blocks/pop-up/__save/pop-up__save.css);
 @import url(../blocks/pop-up/__text/pop-up__text.css);
 @import url(../blocks/pop-up/__form/pop-up__form.css);
+@import url(../blocks/pop-up/__mesto/pop-up__mesto.css);
+@import url(../blocks/pop-up/__mesto/_content/popup__mesto_content.css);
+@import url(../blocks/pop-up/__mesto/_image/pop-up__mesto_image.css);
+@import url(../blocks/pop-up/__card/pop-up__card.css);
+@import url(../blocks/pop-up/__card/_title/pop-up__card_title.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/copyright.css);

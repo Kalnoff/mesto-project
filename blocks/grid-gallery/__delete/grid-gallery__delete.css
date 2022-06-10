@@ -1,0 +1,18 @@
+.grid-gallery__delete {
+    display: block;
+    padding: 0;
+    width: 18px ;
+    height: 19px;
+    background: url(../../../images/del-btn/Trash.svg) no-repeat center / contain;
+    transition: opacity .14s ease-in;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 15px; 
+    right: 15px;
+    border: none;
+  }
+  
+  .grid-gallery__delete:hover {
+    opacity: .5;
+  }

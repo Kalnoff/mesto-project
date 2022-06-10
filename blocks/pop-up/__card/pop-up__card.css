@@ -1,0 +1,11 @@
+.pop-up__card {
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+    max-width: 75vw;
+    max-height: 75vh;
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
