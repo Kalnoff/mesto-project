@@ -1,0 +1,6 @@
+.profile__edit_active {
+    width: 430px;
+    height: 330px;
+    position: absolute;
+    background-color: #fff;
+}

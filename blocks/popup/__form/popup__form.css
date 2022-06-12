@@ -1,0 +1,10 @@
+.popup__form {
+    width: calc(100% - 2*36px);
+    min-height: 322px;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__form {
+        width: calc(100% - 2*22px);
+    }
+}

@@ -1,104 +1,3 @@
-//Открытие и закрытие модального окна
-
-//Открытие
-const profile = document.querySelector('.profile-top');
-const editProfile = profile.querySelector('#profile-top__edit');
-
-const userPopup = document.querySelector('.pop-up');
-const editUserPopup = userPopup.querySelector('#userPopup');
-
-//Закрытие
-const closingPopup = document.querySelector('.pop-up__close');
-const closePopup = closingPopup.querySelector('#closingPopup');
-
-const userProf = document.querySelector('.profile-top__title');
-const popupNaming = document.querySelector('#popup-name')
-
-const subProfile = document.querySelector('.profile-top__subline');
-const popupProf = document.querySelector('#popup-profession')
-
-
- //Попап открытой карточки
- const openCardPopup = document.querySelector('#cardPopup');
- const openCardToggle = openCardPopup.querySelector('#closingCard');
- const openCardImage = openCardPopup.querySelector('.popup__mesto_image');
- const openCardTitle = openCardPopup.querySelector('#MestoOpenSubline');
-
-//Взаимодействие пользователя для открытия-закрытия
-
-function showPopup() {
-  userPopup.classList.add('pop-up_active');
-}
-
-function unshowPopup() {
-  userPopup.classList.remove('pop-up_active');
-}
-
-editProfile.addEventListener('click', showPopup);
-closingPopup.addEventListener('click', unshowPopup);
-
-//Открытие
-
-const addCard = document.querySelector('#profile-top__add-btn');
-const mestoUp = document.querySelector('#mestoPopup');
-
-function showMesto() {
-  mestoUp.classList.add('pop-up_active');
-}
-
-addCard.addEventListener('click', showMesto);
-
-function showCardPopup() {
- openCardPopup.classList.add('pop-up__mesto');
-}
-
-function unshowCardPopup() {
-  openCardPopup.classList.remove('pop-up__mesto');
-}
-
-openCardToggle.addEventListener('click', unshowCardPopup);
-
-
-//Закрытие
-const closeMesto = document.querySelector('#closingMesto');
-
-function unshowMesto() {
-  mestoUp.classList.remove('pop-up_active');
-}
-
-closeMesto.addEventListener('click', unshowMesto);
-
-// Находим форму в DOM
-// const formElement = // Воспользуйтесь методом querySelector()
-// Находим поля формы в DOM
-// const popupNaming = // Воспользуйтесь инструментом .querySelector()
-// const popupProf = // Воспользуйтесь инструментом .querySelector()
-// popupNaming.value = userProf.textContent;
-// popupProf.value = subProfile.textContent;
-// Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
-// function formSubmitHandler (evt) {
-  //   evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-                                                // Так мы можем определить свою логику отправки.
-                                                // О том, как это делать, расскажем позже.
-
-    // Получите значение полей jobInput и nameInput из свойства value
-
-    // Выберите элементы, куда должны быть вставлены значения полей
-
-    // Вставьте новые значения с помощью textContent
-// }
-
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-// formElement.addEventListener('submit', formSubmitHandler);
-
-
-//Добавление карточки в контейнер
-const cardsContainer = document.querySelector('.grid-gallery__container');
-
-//Первоначальные карточки
-
 function createCard (object) {
   const cardTemplate = cardsContainer.querySelector('.card-template').content;
   const cardElement = cardTemplate.querySelector('.grid-gallery__item').cloneNode(true);
@@ -115,16 +14,88 @@ function createCard (object) {
   return cardElement;
 }
 
+
+
+//Открытие и закрытие модального окна
+//Открытие попапа для редактирования имени и профессии
+
+
+//Сама форма
+const popupUserEdit = document.querySelector('#userPopup');
+
+
+//Данные на странице
+const profile = document.querySelector('.profile');
+const profileEditButton = profile.querySelector('.profile__edit');
+
+const nameUser = document.querySelector('.profile__title');
+const profUser = document.querySelector('.profile__subline');
+
+//Закрытие
+const popupClosing = document.querySelector('.popup__close');
+
+//Форма отправки данных профиля в форме
+const formProfile = document.querySelector('#pop-up__form-name');
+
+//Инпуты формы отправки данных профиля в форме
+const nameInput = formProfile.querySelector('#popupnme');
+const inputProfession = document.querySelector('#popup-profession')
+
+
+//Открытие формы попапа для добавления места
+
+//Данные на странице 
+const popupAddCard = document.querySelector('.profile__add');
+const popupCard = document.querySelector('#AddCard');
+
+//Вызов самой формы добавления нового места
+const mestoUp = document.querySelector('#mestoPopup');
+
+//Открытие
+
+const formCard = mestoUp.querySelector('#add-card-form');
+const inputCardName = mestoUp.querySelector('#mestoName');
+const inputCardImage = mestoUp.querySelector('#mestoId');
+
+//Закрытие
+const closeMesto = document.querySelector('#closingMesto');
+
 //Добавление карточки в контейнер
-function startCard (newCard) {
-  cardsContainer.prepend(newCard);
+const cardsContainer = document.querySelector('.grid-gallery__container');
+
+ //Попап открытой карточки
+ const openCardPopup = document.querySelector('#cardPopup');
+ const openCardToggle = openCardPopup.querySelector('#closingCard');
+ const openCardImage = openCardPopup.querySelector('.popup__mesto_image');
+ const openCardTitle = openCardPopup.querySelector('#MestoOpenSubline');
+
+//Универсальные попапы
+function openPopup (popup) {
+  popup.classList.add('popup_active', 'popup__anime');
 }
 
-//Загрузка карточек из массива(бд)
-initialCards.forEach(card => {
-  startCard(createCard(card));
-});
+function closePopup (popup) {
+  popup.classList.remove('popup_active');
+}
 
+//Сохранение обновления Попап редактирования профиля
+
+function handleProfileFormSubmit (evt) {
+  evt.preventDefault(); 
+  
+  nameUser.textContent = nameInput.value;
+  profUser.textContent = inputProfession.value;
+  closePopup(popupUserEdit);
+}
+
+formProfile.addEventListener('submit', handleProfileFormSubmit);
+
+
+
+//Like
+function activeLike(evt) {
+  evt.target.classList.toggle('grid-gallery__like_active');
+}
 
 //Удаление карточки
 
@@ -133,31 +104,82 @@ function trashCard(evt) {
   item.remove();
 }
 
+function showCardPopup() {
+  openCardPopup.classList.add('popup__mesto');
+ }
+ 
+ function unshowCardPopup() {
+   openCardPopup.classList.remove('popup__mesto');
+ }
+ 
+ openCardToggle.addEventListener('click', unshowCardPopup);
 
-//Like
-function activeLike(evt) {
-  evt.target.classList.toggle('grid-gallery__like_active');
-}
-
-//Открытие карточки
+ //Открытие карточки
 function handleCardClick(image, name) {
   openCardImage.src = image;
   openCardImage.alt = name;
   openCardTitle.textContent = name;
-  showCardPopup(openCardPopup);
+  openPopup(openCardPopup);
 }
 
 
+//Добавление карточки пользователем
+function handleAddCardFormSubmit (evt) {
+  evt.preventDefault(); 
+  
+  const addedUserCard = {};
+  addedUserCard.name = inputCardName.value;
+  addedUserCard.link = inputCardImage.value;
+  addCard(createCard(addedUserCard));
+  closePopup(mestoUp);
+}
+ 
+formCard.addEventListener('submit', handleAddCardFormSubmit);
+
+//Загрузка карточек из массива(бд)
+initialCards.forEach(card => {
+  addCard(createCard(card));
+});
+
+//Добавление карточки в контейнер
+function addCard (newCard) {
+  cardsContainer.prepend(newCard);
+}
+
+// Открыть редактирование профиля
+function openEditProfile () {
+  nameInput.value = nameUser.textContent;
+  inputProfession.value = profUser.textContent;
+  openPopup(popupUserEdit);
+}
+
+profileEditButton.addEventListener('click', openEditProfile);
+
+// Закрыть редактирование профиля
+function closeEditProfile() {
+  closePopup(popupUserEdit);
+}
+
+popupClosing.addEventListener('click', closeEditProfile);
 
 
+//Открыть добавление карточки
+function addUserCard() {
+  openPopup(mestoUp);
+}
 
+popupCard.addEventListener('click', addUserCard);
 
+//Закрыть добавление карточки
+function closeUserAdd() {
+  closePopup(mestoUp);
+}
 
+closeMesto.addEventListener('click', closeUserAdd);
 
+//Закрыть открытую карточку
+function closeOpenCard() {
+  closePopup(openCardPopup);
+}
 
-
-
-
-
-
-console.log();
+openCardToggle.addEventListener('click', closeOpenCard);

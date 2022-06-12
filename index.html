@@ -12,18 +12,18 @@
             <img class="header__logo" src="./images/logo/logo.svg" alt="Логотип проекта Место">
          </header>
          <main class="page__main central">
-            <section class="profile-top">
-               <img class="profile-top__avatar" src="./images/ava/AvaKust.jpg" alt="Аватар пользователя">
-               <div class="profile-top__info">
-                  <div class="profile-top__container">
-                     <div class="profile-top__naming">
-                        <h1 class="profile-top__title">Жак Ив Кусто</h1>
-                        <button type="button" class="profile-top__edit" id="profile-top__edit"></button>
+            <section class="profile">
+               <img class="profile__avatar" src="./images/ava/AvaKust.jpg" alt="Аватар пользователя">
+               <div class="profile__info">
+                  <div class="profile__container">
+                     <div class="profile__naming">
+                        <h1 class="profile__title">Жак Ив Кусто</h1>
+                        <button type="button" class="profile__edit" id="profile-top__edit"></button>
                      </div>
-                     <p class="profile-top__subline">Исследователь океана</p>
+                     <p class="profile__subline">Исследователь океана</p>
                   </div>
                </div>
-               <button type="button" class="profile-top__add-btn" id="profile-top__add-btn"></button>
+               <button type="button" class="profile__add" id="AddCard"></button>
             </section>
             <section class="grid-gallery central">
                <div class="grid-gallery__container">
@@ -39,40 +39,40 @@
                   </template>
                </div>
             </section>
-            <!-- дописать класс pop-up_active для активации формы редактирования pop-up -->
-            <section class="pop-up" id="userPopup">
-               <div class="pop-up__content">
-                  <button type="button" class="pop-up__close" id="closingPopup"></button>
-                  <form class="pop-up__form central" name="naming-form">
-                     <h2 class="pop-up__title">Редактировать профиль</h2>
-                     <div class="pop-up__container">
-                        <input type="text" class="pop-up__text" placeholder="Имя" id="popup-name" value="" name="user-name">
-                        <input type="text" class="pop-up__text" placeholder="Деятельность"  id="popup-profession" value="" name="user-profession">
+            <!-- дописать класс popup_active для активации формы редактирования popup -->
+            <section class="popup" id="userPopup">
+               <div class="popup__content">
+                  <button type="button" class="popup__close" id="closingPopup"></button>
+                  <form class="popup__form central" name="naming-form" id="pop-up__form-name">
+                     <h2 class="popup__title">Редактировать профиль</h2>
+                     <div class="popup__container">
+                        <input type="text" class="popup__text" placeholder="Имя" id="popupnme" value="" name="user-name">
+                        <input type="text" class="popup__text" placeholder="Деятельность"  id="popup-profession" value="" name="user-profession">
                      </div>
-                     <input type="submit" class="pop-up__save" value="Сохранить">
+                     <input type="submit" class="popup__save" value="Сохранить">
                   </form>
                </div>
             </section>
             <!-- Новое место -->
-            <section class="pop-up" id="mestoPopup">
-               <div class="pop-up__content">
-                  <button type="button" class="pop-up__close" id="closingMesto"></button>
-                  <form class="pop-up__form central" name="naming-form">
-                     <h2 class="pop-up__title">Новое место</h2>
-                     <div class="pop-up__container">
-                        <input type="text" class="pop-up__text" placeholder="Название" id="mestoName" value="" name="user-name">
-                        <input type="text" class="pop-up__text" placeholder="Ссылка на картинку"  id="mestoId" value="" name="user-profession">
+            <section class="popup" id="mestoPopup">
+               <div class="popup__content">
+                  <button type="button" class="popup__close" id="closingMesto"></button>
+                  <form class="popup__form central" name="naming-form" id="add-card-form">
+                     <h2 class="popup__title">Новое место</h2>
+                     <div class="popup__container">
+                        <input type="text" class="popup__text" placeholder="Название" id="mestoName" value="" name="place-name">
+                        <input type="text" class="popup__text" placeholder="Ссылка на картинку"  id="mestoId" value="" name="place-link">
                      </div>
-                     <input type="submit" class="pop-up__save" value="Сохранить">
+                     <input type="submit" class="popup__save" value="Сохранить">
                   </form>
                </div>
             </section>
-            <!-- открытие добавленной карточки добавить класс pop-up__mesto -->
-            <section class="pop-up" id="cardPopup">
+            <!-- открытие добавленной карточки добавить класс popup__mesto -->
+            <section class="popup popup__card" id="cardPopup">
                <div class="popup__mesto_content">
-                  <button type="button" class="pop-up__close" id="closingCard"></button>
-                  <img class="popup__mesto_image" src="" alt="">
-                  <h2 class="pop-up__card_title" id="MestoOpenSubline">Подпись карточки</h2>
+                  <button type="button" class="popup__close" id="closingCard"></button>
+                  <img class="popup__mesto_image popup__card" src="" alt="">
+                  <h2 class="popup__card_title" id="MestoOpenSubline">Подпись карточки</h2>
                </div>
             </section>
             <script src="./scripts/cards.js"></script>
