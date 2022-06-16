@@ -12,8 +12,8 @@ function createCard (object) {
   cardImage.src = object.link;
   cardImage.alt = object.name;
   cardElement.querySelector('.grid-gallery__text').textContent = object.name;
-  cardElement.querySelector('.grid-gallery__like').addEventListener('click', activeLike);
-  cardElement.querySelector('.grid-gallery__delete').addEventListener('click', trashCard);
+  cardElement.querySelector('.grid-gallery__like').addEventListener('click', handleLikeButton);
+  cardElement.querySelector('.grid-gallery__delete').addEventListener('click', deleteCard);
   cardImage.addEventListener('click', () => handleCardClick(object.link, object.name));
 
   return cardElement;
@@ -35,7 +35,6 @@ const nameUser = document.querySelector('.profile__title');
 const professionUser = document.querySelector('.profile__subline');
 
 //Закрытие
-const popupClose = document.querySelector('.popup__close');
 const popupCloseProfile = document.querySelector('#closeProfile')
 
 const popupNewMestoClose = document.querySelector('#closingMesto');
@@ -82,6 +81,8 @@ function closePopup (popup) {
   popup.classList.remove('popup_opened');
 }
 
+
+
 //Сохранение обновления Попап редактирования профиля
 
 function handleProfileFormSubmit (evt) {
@@ -95,18 +96,18 @@ function handleProfileFormSubmit (evt) {
 formProfile.addEventListener('submit', handleProfileFormSubmit);
 
 //Like
-function activeLike(evt) {
+function handleLikeButton(evt) {
   evt.target.classList.toggle('grid-gallery__like_active');
 }
 
 //Удаление карточки
 
-function trashCard(evt) {
+function deleteCard(evt) {
   const item = evt.target.closest('.grid-gallery__item');
   item.remove();
 }
  
- cardOpenToggle.addEventListener('click', closePopup);
+
 
  //Открытие карточки
 function handleCardClick(image, name) {
